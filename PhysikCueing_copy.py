@@ -129,6 +129,9 @@ while True: #mov[0].status != constants.FINISHED
                 elif backbutton[i].contains(mouse):
                     ntime = max(mov[i].getCurrentFrameTime() - 1.0, 0.0)
                     mov[i].seek(ntime)
+                elif forwardbutton[i].contains(mouse):
+                    ntime = max(mov[i].getCurrentFrameTime() + 1.0, 0.0)
+                    mov[i].seek(ntime)                   
                 elif tobeginningbutton[i].contains(mouse):
                     mov[i].seek(0)
             buttonWas = 'down'
